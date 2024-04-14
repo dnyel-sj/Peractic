@@ -1,21 +1,21 @@
-# برنامه محاسبه روز هفته آینده
+#حل معادله قانون کرامر
+a = eval(input("Yek add entekhab kn :"))
+b = eval(input("Yek add entekhab kn :"))
+c = eval(input("Yek add entekhab kn :"))
+d = eval(input("Yek add entekhab kn :"))
+e = eval(input("Yek add entekhab kn :"))
+f = eval(input("Yek add entekhab kn :"))
 
-# دریافت تاریخ امروز به عنوان عدد صحیح
-today = int(input("Tarish emroz be add vared kn :"))
+if (a*d) - (b*c) > 0 :
+    x = ((e*d) - (b*f)) / ((a*d) - (b*c))
+    y = ((a*f) - (e*c)) / ((a*d) - (b*c))
+    print(f"Meghdar x : {x}")
+    print(f"Meghdar y : {y}")
 
-# دریافت تعداد روزهای سپری شده از تاریخ امروز
-days_passed = int(input("Roz separi shode az tarikh emroz vard kn :"))
-
-# محاسبه روز هفته امروز
-day_of_week = today % 7
-
-# محاسبه روز هفته فردا
-tomorrow_day_of_week = (day_of_week + days_passed) % 7
-
-# تبدیل عدد روز هفته به نام روز
-names_of_days = ["shanbe", "yekshanbe", "doshanbe", "seshanbe ", "chaharshanbe", "panjshanbe", "jome"]
-tomorrow_name_of_day = names_of_days[tomorrow_day_of_week]
-
-# چاپ خروجی
-print("Emroz :{}".format(names_of_days[day_of_week]))
-print("Tarikh {} roz bad hast: {} ".format(days_passed, tomorrow_name_of_day))
+elif (a*d) - (b*c) < 0 :   
+    x = ((e*d) - (b*f)) / ((a*d) - (b*c))
+    y = ((a*f) - (e*c)) / ((a*d) - (b*c))
+    print(f"Meghdar x : {x}")
+    print(f"Meghdar y : {y}")
+else :
+    print("Meghdar mored nazar barabr 0 va tarif nshode ast!")    

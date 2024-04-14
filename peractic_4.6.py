@@ -1,22 +1,22 @@
 # دریافت قد و وزن از کاربر
-قد = float(input("Ghad khod ra be metr vared konid : "))
-وزن = float(input("Vazn khod ra be kilo vared konid : "))
+Ghad = float(input("Ghad khod ra be metr vared konid : "))
+vazn = float(input("Vazn khod ra be kilo vared konid : "))
 
 # محاسبه BMI
-bmi = وزن / (قد ** 2)
+bmi = vazn / (Ghad** 2)
 
 # چاپ BMI
 print("Shakhes BMI shoma in add {} Hast.".format(bmi))
 
 # تعیین وضعیت سلامتی
 if bmi < 18.5:
-    وضعیت_سلامتی = "Kambod vazn"
+    vaziat_salamati = "Kambod vazn"
 elif bmi < 25:
-    وضعیت_سلامتی = "Vazn normal"
+    vaziat_salamati = "Vazn normal"
 elif bmi < 30:
-    وضعیت_سلامتی = "Ezafe vazn"
+    vaziat_salamati = "Ezafe vazn"
 else:
-    وضعیت_سلامتی = "Chaghi"
+    vaziat_salamati = "Chaghi"
 
 # چاپ وضعیت سلامتی
-print("Vaziat salamati shoma dar halet {} Hast".format(وضعیت_سلامتی))
+print("Vaziat salamati shoma dar halet {} Hast".format(vaziat_salamati))

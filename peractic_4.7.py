@@ -1,23 +1,21 @@
-# دریافت نمرات از کاربر
-نمره_اول = float(input("Nomre dars aval vared kn:"))
-نمره_دوم = float(input("Nomre dars dovom vared kn:"))
-نمره_سوم = float(input("Nomre dars sevom vared kn:"))
+# معادله درجه دوم
+import math
+a = eval(input("Avalin add vared kn :"))
+b = eval(input("Dovomin add vared kn :"))
+c = eval(input("Sevomi add vared kn:"))
 
-# محاسبه معدل
-معدل = (نمره_اول + نمره_دوم + نمره_سوم) / 3
+# فرمول دلتا
+delta = (b**2) - (4*a*c)
 
-# چاپ معدل
-print("Moadle shoma {} ast. ".format(معدل))
+# شرط های لازم
+if delta > 0 :
+    x1 = (-b + math.sqrt(delta)) / (2*a)
+    x2 = (-b + math.sqrt(delta)) / (2*a)
+    print(f"Delta 2 ta rishe dare : {x1} VA {x2}")
 
-# تعیین وضعیت تحصیلی
-if معدل >= 17:
-    وضعیت_تحصیلی = "Awlii"
-elif معدل >= 15:
-    وضعیت_تحصیلی = "Khob"
-elif معدل >= 12:
-    وضعیت_تحصیلی = "Ghabel ghabol"
-else:
-    وضعیت_تحصیلی = "Mardod"
+elif delta == 0 :
+    x = (-b) / (2*a)
+    print(f"Delta 1 javab dre : {x}")
 
-# چاپ وضعیت تحصیلی
-print("Vaziat tahsili shoma {} ast.".format(وضعیت_تحصیلی))
+else :
+    print("Delta hich jabvab ndarad!")

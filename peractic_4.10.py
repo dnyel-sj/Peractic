@@ -1,9 +1,10 @@
+#بازی با کاربر 
 import random
 
 def main():
-  # دو عدد تصادفی بین 1 تا 100 تولید می کنیم
-  num1 = random.randint(1, 100)
-  num2 = random.randint(1, 100)
+  # دو عدد تصادفی بین 1 تا 10 تولید می کنیم
+  num1 = random.randint(1, 10)
+  num2 = random.randint(1, 10)
 
   # سوال را به کاربر نمایش می دهیم
   print(f"Quiz {num1} * {num2} = ?")

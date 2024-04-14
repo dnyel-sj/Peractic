@@ -1,25 +1,15 @@
-def تعداد_روزهای_ماه(ماه, سال):
-  """
-  این تابع تعداد روزهای یک ماه را برمیگرداند
+# تبدیل نرخ پول از دلار به تومان بر بالعکس
+num_1 = eval(input("add mored nazar be dollar vared kn :"))
+num_2 = eval(input("add mored nazar be toman vared kn :"))
 
-  """
+if num_2 ==0 :
+  x = eval(input("add ra be dollar vared kn :"))
+  print(f" {x}, hast {x*num_1} toman")
 
-  if ماه in (1, 3, 5, 7, 8, 10, 12):
-    return 31
-  elif ماه == 2:
-    if سال % 4 == 0 and (سال % 100 != 0 or سال % 400 == 0):
-      return 29
-    else:
-      return 28
-  else:
-    return 30
+elif num_2 == 1 :
+  y = eval(input("add ra be toman vared kn :"))  
+  print(f" {y}, hast {y/num_1} dollars")
 
-# دریافت ورودی از کاربر
-ماه = int(input(" (1-12) Mah: "))
-سال = int(input("Sal: "))
-
-# محاسبه تعداد روزهای ماه
-تعداد_روزها = تعداد_روزهای_ماه(ماه, سال)
-
-# نمایش خروجی
-print(f"Mah {ماه} , Sal {سال} Daraye: {تعداد_روزها} Roz ast.")
+else :
+  print("add mored nazar dar mahdode mojod nist!")
+    
